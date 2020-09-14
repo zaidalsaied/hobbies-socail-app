@@ -15,13 +15,12 @@ import java.util.Objects;
 @Document(collection = "Users")
 public class User implements UserCreation {
 
-    @Id
-    private String id;
     @Indexed(direction = IndexDirection.ASCENDING)
     private String firstName;
     @Indexed(direction = IndexDirection.ASCENDING)
     private String lastName;
-    private String username;
+    @Id
+    private String username; // could be called ID
     private String email;
     private String password;
     private String imageUrl;
@@ -57,7 +56,7 @@ public class User implements UserCreation {
     }
 
     public String getId() {
-        return id;
+        return username;
     }
 
     public String getFirstName() {
