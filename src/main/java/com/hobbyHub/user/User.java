@@ -1,7 +1,8 @@
-package com.HobbyHub.User;
+package com.hobbyHub.user;
 
-import com.HobbyHub.Post.*;
-import com.HobbyHub.hobby.Hobby;
+import com.hobbyHub.hobby.Hobby;
+import com.hobbyHub.post.blog.Blog;
+import com.hobbyHub.post.course.Course;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;

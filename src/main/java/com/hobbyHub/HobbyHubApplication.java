@@ -1,4 +1,4 @@
-package com.HobbyHub;
+package com.hobbyHub;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class HobbyHubApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HobbyHubApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(HobbyHubApplication.class, args);
+    }
 
 }

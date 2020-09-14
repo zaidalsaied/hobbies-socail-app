@@ -1,8 +1,10 @@
-package com.HobbyHub.hobby;
+package com.hobbyHub.hobby;
 
 
-import com.HobbyHub.Post.*;
-import com.HobbyHub.User.User;
+import com.hobbyHub.post.blog.Blog;
+import com.hobbyHub.post.course.Course;
+import com.hobbyHub.post.video.Video;
+import com.hobbyHub.user.User;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -19,10 +21,10 @@ public class Hobby {
     private String name; // could be called 'Id'
     private String description;
     private String imageUrl;
-    private List <User> followers;
-    private List <Blog> blogs;
-    private List <Video> videos;
-    private List <Course> courses;
+    private List<User> followers;
+    private List<Blog> blogs;
+    private List<Video> videos;
+    private List<Course> courses;
 
     public Hobby(String name, String description, String imageUrl) {
         this.name = name;
@@ -47,7 +49,7 @@ public class Hobby {
     }
 
     public String getImageUrl() {
-     return imageUrl;
+        return imageUrl;
     }
 
     public void addFollower(User user) {
@@ -65,7 +67,7 @@ public class Hobby {
         return followers;
     }
 
-    public void addBlog(Blog blog){
+    public void addBlog(Blog blog) {
         blogs.add(blog);
     }
 
@@ -73,14 +75,14 @@ public class Hobby {
         blogs.remove(blog);
     }
 
-    public List <Blog> getBlogs() {
+    public List<Blog> getBlogs() {
         List<Blog> blogs = new ArrayList<>();
         for (Blog blog : this.blogs)
             blogs.add(blog);
         return blogs;
     }
 
-    public void addVideo(Video video){
+    public void addVideo(Video video) {
         videos.add(video);
     }
 
@@ -88,7 +90,7 @@ public class Hobby {
         videos.remove(video);
     }
 
-    public List <Video> getVideos() {
+    public List<Video> getVideos() {
         List<Video> videos = new ArrayList<>();
         for (Video video : this.videos)
             videos.add(video);

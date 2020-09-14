@@ -1,4 +1,4 @@
-package com.HobbyHub.User;
+package com.hobbyHub.user;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

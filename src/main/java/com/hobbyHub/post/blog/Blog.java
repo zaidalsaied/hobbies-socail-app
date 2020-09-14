@@ -1,9 +1,9 @@
-package com.HobbyHub.Post;
+package com.hobbyHub.post.blog;
 
+import com.hobbyHub.post.Post;
+import com.hobbyHub.user.User;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.HobbyHub.User.User;
 
 @Document(collection = "Blogs")
 public class Blog extends Post {

@@ -1,6 +1,7 @@
-package com.HobbyHub.Post;
+package com.hobbyHub.post.video;
 
-import com.HobbyHub.User.User;
+import com.hobbyHub.post.Post;
+import com.hobbyHub.user.User;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

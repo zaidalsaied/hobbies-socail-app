@@ -1,4 +1,4 @@
-package com.HobbyHub.User;
+package com.hobbyHub.user;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

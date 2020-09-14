@@ -1,7 +1,7 @@
-package com.HobbyHub.LikeStatus;
+package com.hobbyHub.likeable;
 
 
-import com.HobbyHub.User.User;
+import com.hobbyHub.user.User;
 
 import java.util.ArrayList;
 import java.util.HashSet;

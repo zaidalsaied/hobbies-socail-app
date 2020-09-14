@@ -1,7 +1,8 @@
-package com.HobbyHub.commentsStatus;
+package com.hobbyHub.commentable;
 
 
-import com.HobbyHub.comment.Comment;
+import com.hobbyHub.comment.Comment;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class CommentsStatus {
     }
 
     public List<Comment> getComments() {
-        List <Comment> comments = new ArrayList<>();
+        List<Comment> comments = new ArrayList<>();
         for (Comment comment : this.comments)
             comments.add(comment);
         return comments;

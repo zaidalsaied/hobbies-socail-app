@@ -1,37 +1,59 @@
-package com.HobbyHub.comment;
+package com.hobbyHub.post;
 
-import com.HobbyHub.LikeStatus.Likable;
-import com.HobbyHub.LikeStatus.LikesStatus;
-import com.HobbyHub.User.User;
-import com.HobbyHub.User.UserCreation;
+import com.hobbyHub.comment.Comment;
+import com.hobbyHub.commentable.Commentable;
+import com.hobbyHub.commentable.CommentsStatus;
+import com.hobbyHub.likeable.Likable;
+import com.hobbyHub.likeable.LikesStatus;
+import com.hobbyHub.user.User;
+import com.hobbyHub.user.UserCreation;
 
 import java.util.Date;
 import java.util.List;
 
-public class Comment implements Likable, UserCreation {
-
+public abstract class Post implements Likable, Commentable, UserCreation {
     private User creator;
-    private String body;
+    private String title;
+    private String description;
     private LikesStatus likesStatus;
+    private CommentsStatus commentsStatus;
+    private String hobbyName;
     private Date dateCreated;
 
-    public Comment() {
+    public Post() {
         likesStatus = new LikesStatus();
+        commentsStatus = new CommentsStatus();
         dateCreated = new Date();
     }
 
-    public Comment(User creator, String body) {
+    public Post(User creator, String title, String description, String hobby) {
         this();
         this.creator = creator;
-        this.body = body;
+        this.title = title;
+        this.description = description;
+        this.hobbyName = hobby;
     }
 
-    public String getBody() {
-        return body;
+    abstract public String getId();
+
+    public String getHobbyName() {
+        return hobbyName;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
@@ -83,4 +105,15 @@ public class Comment implements Likable, UserCreation {
     public Date getDateCreated() {
         return dateCreated;
     }
+
+    @Override
+    public List<Comment> getComments() {
+        return commentsStatus.getComments();
+    }
+
+    @Override
+    public int numberOfComments() {
+        return commentsStatus.numberOfComments();
+    }
+
 }

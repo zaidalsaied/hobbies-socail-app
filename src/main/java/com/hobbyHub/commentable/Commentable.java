@@ -1,10 +1,12 @@
-package com.HobbyHub.commentsStatus;
+package com.hobbyHub.commentable;
 
 
-import com.HobbyHub.comment.Comment;
+import com.hobbyHub.comment.Comment;
+
 import java.util.List;
 
 public interface Commentable {
     List<Comment> getComments();
+
     int numberOfComments();
 }
