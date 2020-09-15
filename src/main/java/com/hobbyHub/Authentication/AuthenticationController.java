@@ -128,7 +128,7 @@ public class AuthenticationController { // WORK! please
         if (!user.getPassword().equals(encryptPassword(password))) {
             loginError = "Wrong password entered!";
             request.setAttribute("loginError", loginError);
-            return "index";
+            return "login";
         }
 
         HttpSession session = request.getSession();
