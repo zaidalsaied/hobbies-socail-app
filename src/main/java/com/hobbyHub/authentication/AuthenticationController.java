@@ -47,7 +47,7 @@ public class AuthenticationController { // WORK! please
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
         String registerError = null;
-        clearAttributes(request);
+        clearRequestAttributes(request);
 
         if (firstName == null || lastName == null || username == null || email == null || password == null) {
             System.out.println(firstName + " " + lastName + " " + username + " " + email + " " + password);
@@ -102,7 +102,7 @@ public class AuthenticationController { // WORK! please
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String loginError = null;
-        clearAttributes(request);
+        clearRequestAttributes(request);
 
         if (username == null || password == null) {
             loginError = "can't read some values, make sure to fill all information!";
@@ -140,12 +140,27 @@ public class AuthenticationController { // WORK! please
 
         return "about-hobbyhub";
     }
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        clearSessionAttributes(session);
+        clearRequestAttributes(request);
+        return "about-hobbyhub";
+    }
 
-    private void clearAttributes(HttpServletRequest request) {
+    private void clearRequestAttributes(HttpServletRequest request) {
         Enumeration<String> attributes = request.getAttributeNames();
         while (attributes.hasMoreElements()) {
             String ele = attributes.nextElement();
             request.removeAttribute(ele);
+        }
+    }
+
+    private void clearSessionAttributes(HttpSession seeiosn) {
+        Enumeration<String> attributes = seeiosn.getAttributeNames();
+        while (attributes.hasMoreElements()) {
+            String ele = attributes.nextElement();
+            seeiosn.removeAttribute(ele);
         }
     }
 
@@ -193,4 +208,5 @@ public class AuthenticationController { // WORK! please
         }
 
     }
+
 }
