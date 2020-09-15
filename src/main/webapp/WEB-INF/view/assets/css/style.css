@@ -1,0 +1,160 @@
+/* Will cause the element to take on the colour of its parent  */
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #222629;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    overflow: hidden;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #86C232;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav ul li{
+margin-left:1em;
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Add an active class to highlight the current page */
+.sidenav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.sidenav .icon {
+    display: none;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .sidenav a:not(:first-child) {
+        display: none;
+    }
+
+    .sidenav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the sidenav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .sidenav.responsive {
+        position: relative;
+    }
+
+    .sidenav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .sidenav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.navbar-nav.navbar-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+/* site theam colors */
+
+.color1 {
+    background-color: #61892f;
+    color: white;
+}
+
+.color2 {
+    background-color: #86C232;
+    color: white;
+}
+
+.color3 {
+    background-color: #222629;
+    color: #86C232;
+}
+
+.color4 {
+    background-color: #474B4F;
+    color: white;
+}
+
+.color5 {
+    background-color: #6B6E70;
+    color: white;
+}
+
+.nav-bar-colors {
+    background-color: #222629 !important;
+    color: #86C232 !important;
+}
