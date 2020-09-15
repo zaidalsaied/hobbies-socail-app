@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HobbyRepository extends MongoRepository<Hobby, String> {
-
+    Hobby findByName(String name);
 }

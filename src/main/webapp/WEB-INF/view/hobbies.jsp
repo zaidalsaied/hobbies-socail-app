@@ -62,7 +62,7 @@
       </nav>
       <div class="container-fluid">
         <div class="card ml-3">
-          <a href="">
+          <a href="${pageContext.request.contextPath}/hobby/Chess">
             <img
               class="card-img-top"
               src="/assets/img/chess_background.jpg"
@@ -79,7 +79,7 @@
           </div>
         </div>
         <div class="card ml-3">
-          <a href="">
+          <a href="${pageContext.request.contextPath}/hobby/Reading">
             <img
               class="card-img-top"
               src="/assets/img/reading.jpg"
@@ -96,7 +96,7 @@
           </div>
         </div>
         <div class="card ml-3">
-          <a href="">
+          <a href="${pageContext.request.contextPath}/hobby/Cooking">
             <img
               class="card-img-top"
               src="/assets/img/cooking.jpg"
@@ -113,7 +113,7 @@
           </div>
         </div>
         <div class="card ml-3">
-          <a href="">
+          <a href="${pageContext.request.contextPath}/hobby/Writing">
             <img
               class="card-img-top"
               src="/assets/img/writing.jpg"
@@ -130,7 +130,7 @@
           </div>
         </div>
         <div class="card ml-3">
-          <a href="">
+          <a href="${pageContext.request.contextPath}/hobby/Coding">
             <img
               class="card-img-top"
               src="/assets/img/coding.jpg"
@@ -147,7 +147,7 @@
           </div>
         </div>
         <div class="card ml-3">
-          <a href="">
+          <a href="${pageContext.request.contextPath}/hobby/Traveling">
             <img
               class="card-img-top"
               src="/assets/img/traveling.jpg"
