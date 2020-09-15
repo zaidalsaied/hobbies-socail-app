@@ -1,6 +1,6 @@
 package com.hobbyHub.hobby;
 
-import com.hobbyHub.user.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

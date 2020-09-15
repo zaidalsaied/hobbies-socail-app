@@ -1,5 +1,6 @@
+<%@ page import="com.hobbyHub.hobby.Hobby" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-   pageEncoding="ISO-8859-1"%>
+         pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="ca">
   <head>
@@ -10,11 +11,6 @@
       rel="stylesheet"
     />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Blog Template" />
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
-    <!-- FontAwesome JS-->
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
@@ -53,7 +49,9 @@
     <%@include  file="sidenav.jsp" %>
     <div id="main">
       <nav class="navbar navbar-expand-lg navbar-dark nav-bar-colors">
-        <a class="navbar-brand nav-bar-colors" href="#">Chess</a>
+        <a class="navbar-brand nav-bar-colors" href="#">
+          <%=((Hobby) request.getSession().getAttribute("hobby_object")).getName()%>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -89,7 +87,9 @@
         <article class="blog-post px-3 py-5 p-md-5">
           <div class="container">
             <header class="blog-post-header inline">
-              <h2 class="title mb-2 inline">Chess</h2>
+              <h2 class="title mb-2 inline">
+                <%=((Hobby) request.getSession().getAttribute("hobby_object")).getName()%>
+              </h2>
               <input type="button" value="Follow" class="btn btn-primary" />
               <div class="meta mb-3"></div>
             </header>
@@ -97,32 +97,12 @@
               <figure class="blog-banner">
                 <img
                   class="img-fluid"
-                  src="/assets/img/chess_background.jpg"
+                  src='<%=((Hobby) request.getSession().getAttribute("hobby_object")).getImageUrl()%>'
                   alt="image"
                 />
               </figure>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-                fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-                rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-                felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
-                Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-                dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-                dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-                vitae, eleifend ac, enim.
+                <%=((Hobby) request.getSession().getAttribute("hobby_object")).getDescription()%>
               </p>
             </div>
           </div>
