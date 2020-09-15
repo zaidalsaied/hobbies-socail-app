@@ -30,7 +30,7 @@ public class User implements UserCreation {
     private List<Blog> favoriteBlogs;
     private List<User> followings;
     private List<User> followers;
-    private List<Hobby> hobbies;
+    private List<String> hobbies;
     private List<Course> takenCourses;
     private List<Course> ownedCourses;
 
@@ -142,9 +142,9 @@ public class User implements UserCreation {
         return followers;
     }
 
-    public List<Hobby> getHobbies() {
-        List<Hobby> hobbies = new ArrayList<>();
-        for (Hobby hobby : this.hobbies)
+    public List<String> getHobbies() {
+        List<String> hobbies = new ArrayList<>();
+        for (String hobby : this.hobbies)
             hobbies.add(hobby);
         return hobbies;
     }
@@ -179,7 +179,7 @@ public class User implements UserCreation {
         followers.add(user);
     }
 
-    public void addHobby(Hobby hobby) {
+    public void addHobby(String hobby) {
         hobbies.add(hobby);
     }
 

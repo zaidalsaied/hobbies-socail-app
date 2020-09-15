@@ -23,7 +23,7 @@
 
         </li>
         <li>
-            <a href="#about"><i class="bx bx-search-alt"></i>Browse</a>
+            <a href="${pageContext.request.contextPath}/browse"><i class="bx bx-search-alt"></i>Browse</a>
         </li>
         <li>
             <a href="#about"><i class="bx bx-trending-up"></i>Top Blogs</a>

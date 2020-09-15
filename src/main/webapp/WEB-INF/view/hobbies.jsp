@@ -10,12 +10,6 @@
       rel="stylesheet"
     />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Blog Template" />
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
-    <link rel="shortcut icon" href="favicon.ico" />
-
     <!-- FontAwesome JS-->
     <script
       defer
@@ -63,41 +57,11 @@
   <body>
   <%@include  file="sidenav.jsp" %>
     <div id="main">
-      <nav class="navbar navbar-expand-lg navbar-dark nav-bar-colors">
+      <nav class="navbar navbar-expand-lg navbar-dark nav-bar-colors mb-5">
         <a class="navbar-brand nav-bar-colors">Hobbies</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="nav navbar-nav navbar-center">
-            <li class="nav-item">
-              <a class="nav-link nav-bar-colors" href="#">Feed</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link nav-bar-colors" href="#">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-bar-colors" href="#">Courses</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-bar-colors" href="#">Videos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-bar-colors" href="#">About</a>
-            </li>
-          </ul>
-        </div>
       </nav>
       <div class="container-fluid">
-        <div class="card">
+        <div class="card ml-3">
           <a href="">
             <img
               class="card-img-top"
@@ -114,7 +78,7 @@
             <input type="button" value="Follow" class="btn btn-primary" />
           </div>
         </div>
-        <div class="card">
+        <div class="card ml-3">
           <a href="">
             <img
               class="card-img-top"
@@ -131,7 +95,7 @@
             <input type="button" value="Follow" class="btn btn-primary" />
           </div>
         </div>
-        <div class="card">
+        <div class="card ml-3">
           <a href="">
             <img
               class="card-img-top"
@@ -148,7 +112,7 @@
             <input type="button" value="Follow" class="btn btn-primary" />
           </div>
         </div>
-        <div class="card">
+        <div class="card ml-3">
           <a href="">
             <img
               class="card-img-top"
@@ -165,7 +129,7 @@
             <input type="button" value="Follow" class="btn btn-primary" />
           </div>
         </div>
-        <div class="card">
+        <div class="card ml-3">
           <a href="">
             <img
               class="card-img-top"
@@ -182,7 +146,7 @@
             <input type="button" value="Follow" class="btn btn-primary" />
           </div>
         </div>
-        <div class="card">
+        <div class="card ml-3">
           <a href="">
             <img
               class="card-img-top"
