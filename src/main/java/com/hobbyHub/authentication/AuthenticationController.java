@@ -1,4 +1,4 @@
-package com.hobbyHub.Authentication;
+package com.hobbyHub.authentication;
 
 
 import com.hobbyHub.user.User;
@@ -141,17 +141,10 @@ public class AuthenticationController { // WORK! please
         return "about-hobbyhub";
     }
 
-    @RequestMapping("/about")
-    public String about() {
-        return "about";
-    }
-
-
     private void clearAttributes(HttpServletRequest request) {
         Enumeration<String> attributes = request.getAttributeNames();
         while (attributes.hasMoreElements()) {
             String ele = attributes.nextElement();
-            System.out.println(ele);
             request.removeAttribute(ele);
         }
     }
