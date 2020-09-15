@@ -33,7 +33,7 @@
         </li>
 
         <li>
-            <a href="#services"><i class="bx bx-info-circle"></i>About</a>
+            <a href="${pageContext.request.contextPath}/about"><i class="bx bx-info-circle"></i>About</a>
         </li>
 
         <%
