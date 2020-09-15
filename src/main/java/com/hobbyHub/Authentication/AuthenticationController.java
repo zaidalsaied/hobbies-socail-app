@@ -83,7 +83,6 @@ public class AuthenticationController { // WORK! please
             request.setAttribute("registerError", registerError);
             return "register";
         }
-
         User user = new User(firstName, lastName, username, email, encryptPassword(password), pickRandomPic());
         userService.createUser(user);
 
@@ -93,7 +92,7 @@ public class AuthenticationController { // WORK! please
         session.setAttribute("user_last_name", lastName);
         session.setAttribute("user_email", email);
         session.setAttribute("user_id", user.getId());
-
+        session.setAttribute("user_imageUrl", user.getImageUrl());
         return "about-hobbyhub";
     }
 
@@ -137,6 +136,7 @@ public class AuthenticationController { // WORK! please
         session.setAttribute("user_last_name", user.getLastName());
         session.setAttribute("user_email", user.getEmail());
         session.setAttribute("user_id", user.getId());
+        session.setAttribute("user_imageUrl", user.getImageUrl());
 
         return "about-hobbyhub";
     }

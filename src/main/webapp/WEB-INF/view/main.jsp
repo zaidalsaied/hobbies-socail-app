@@ -50,33 +50,8 @@
         </style>
       </head>
     <body>
-      <div id="mySidenav" class="sidenav inherit">
-        <ul>
-          <li>
-            <img
-              class="profile-image mb-3 rounded-circle mx-auto"
-              src="/assets/img/coding.jpg"
-              alt="profile-image"
-              style="width: 150px; height: 150px"
-            />
-            <a href="">//user name</a>
-          </li>
-          <li>
-            <a href="#about"><i class="bx bx-search-alt"></i>Browse</a>
-          </li>
-          <li>
-            <a href="#about"><i class="bx bx-trending-up"></i>Top Blogs</a>
-          </li>
-          <li>
-            <a href="#resume"><i class="bx bx-user-check"></i>Following</a>
-          </li>
-
-          <li>
-            <a href="#services"><i class="bx bx-info-circle"></i>About</a>
-          </li>
-        </ul>
-      </div>
-       <div id="main">
+    <%@include  file="sidenav.jsp" %>
+    <div id="main">
 
         <nav class="navbar navbar-expand-lg navbar-dark nav-bar-colors">
           <a class="navbar-brand nav-bar-colors" href="#"></a>
