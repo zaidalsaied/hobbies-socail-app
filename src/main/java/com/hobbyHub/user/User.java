@@ -207,7 +207,7 @@ public class User implements UserCreation {
         followers.remove(user);
     }
 
-    public void removeHobby(Hobby hobby) {
+    public void removeHobby(String hobby) {
         hobbies.remove(hobby);
     }
 

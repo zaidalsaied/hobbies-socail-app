@@ -93,6 +93,7 @@ public class AuthenticationController { // WORK! please
         session.setAttribute("user_email", email);
         session.setAttribute("user_id", user.getId());
         session.setAttribute("user_imageUrl", user.getImageUrl());
+        session.setAttribute("user_object", user);
         return "about-hobbyhub";
     }
 
@@ -137,13 +138,15 @@ public class AuthenticationController { // WORK! please
         session.setAttribute("user_email", user.getEmail());
         session.setAttribute("user_id", user.getId());
         session.setAttribute("user_imageUrl", user.getImageUrl());
+        session.setAttribute("user_object", user);
 
         return "about-hobbyhub";
     }
     @RequestMapping("/logout")
     public String logout(HttpServletRequest request) {
         HttpSession session = request.getSession();
-        clearSessionAttributes(session);
+        request.getSession().invalidate();
+        request.getSession(true);
         clearRequestAttributes(request);
         return "about-hobbyhub";
     }

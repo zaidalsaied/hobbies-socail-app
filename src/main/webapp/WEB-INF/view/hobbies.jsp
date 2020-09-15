@@ -1,5 +1,6 @@
+<%@ page import="com.hobbyHub.user.User" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-   pageEncoding="ISO-8859-1"%>
+         pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,7 +54,6 @@
       }
     </style>
   </head>
-
   <body>
   <%@include  file="sidenav.jsp" %>
     <div id="main">
@@ -75,7 +75,7 @@
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <input type="button" value="Follow" class="btn btn-primary" />
+            <input name="Chess" type="button" onclick="window.location.assign(<%= "'" + request.getContextPath() + "/followingHobby/Chess" + "'"%>);" value="Follow" class="btn btn-primary input" />
           </div>
         </div>
         <div class="card ml-3">
@@ -92,7 +92,7 @@
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <input type="button" value="Follow" class="btn btn-primary" />
+            <input name="Reading" type="button" onclick="window.location.assign(<%= "'" + request.getContextPath() + "/followingHobby/Reading" + "'"%>);" value="Follow" class="btn btn-primary input" />
           </div>
         </div>
         <div class="card ml-3">
@@ -109,7 +109,7 @@
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <input type="button" value="Follow" class="btn btn-primary" />
+            <input name="Cooking" type="button" onclick="window.location.assign(<%= "'" + request.getContextPath() + "/followingHobby/Cooking" + "'"%>);" value="Follow" class="btn btn-primary input" />
           </div>
         </div>
         <div class="card ml-3">
@@ -126,7 +126,7 @@
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <input type="button" value="Follow" class="btn btn-primary" />
+            <input name="Writing" type="button" onclick="window.location.assign(<%= "'" + request.getContextPath() + "/followingHobby/Writing" + "'"%>);" value="Follow" class="btn btn-primary input" />
           </div>
         </div>
         <div class="card ml-3">
@@ -143,7 +143,7 @@
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <input type="button" value="Follow" class="btn btn-primary" />
+            <input name="Coding" type="button" onclick="window.location.assign(<%= "'" + request.getContextPath() + "/followingHobby/Coding" + "'"%>);" value="Follow" class="btn btn-primary input" />
           </div>
         </div>
         <div class="card ml-3">
@@ -160,11 +160,56 @@
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <input type="button" value="Follow" class="btn btn-primary" />
+            <input name="Traveling" type="button" onclick="window.location.assign(<%= "'" + request.getContextPath() + "/followingHobby/Traveling" + "'"%>);" value="Follow" class="btn btn-primary input" />
           </div>
         </div>
       </div>
     </div>
+
+  <%!
+    String getHobbyArray(User user){
+      String []items = (user.getHobbies().toArray(new String[1]));
+      String result = "[";
+      for(int i = 0; i < items.length; i++) {
+        result += "\"" + items[i] + "\"";
+        if(i < items.length - 1) {
+          result += ", ";
+        }
+      }
+      result += "]";
+      return result;
+    }
+  %>
+
+  <%! String hobbyArray = "[]"; %>
+  <script>
+
+    var elem = document.getElementsByClassName("input");
+    for (var i = 0; i < elem.length; i++) {
+      elem[i].value = "Follow";
+    }
+    <%
+        if (request.getSession().getAttribute("user_object") != null) {
+            hobbyArray = getHobbyArray((User)request.getSession().getAttribute("user_object"));
+            }
+        else {
+          System.out.println("NULL SESSION " + (request.getSession() == null));
+        }
+    %>
+
+
+    var hobbyArray = <%=hobbyArray%>
+
+    for (var i = 0; i < elem.length; i++) {
+      if (hobbyArray.includes(elem[i].name)) {
+          elem[i].classList.remove('btn-primary');
+          elem[i].classList.add('btn-secondary');
+          elem[i].value = "Unfollow";
+      }
+    }
+    <% hobbyArray = "[]";%>
+    hobbyArray = [];
+    </script>
     <!-- Vendor JS Files -->
     <script src="/assets/vendor/jquery/jquery.min.js"></script>
     <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
