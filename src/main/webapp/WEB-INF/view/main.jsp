@@ -26,23 +26,23 @@
           crossorigin="anonymous"
         ></script>
 
-        <link id="theme-style" rel="stylesheet" href="view/assets/css/theme-1.css" />
+        <link id="theme-style" rel="stylesheet" href="/assets/css/theme-1.css" />
 
         <title>HobbyHub</title>
         <link
-          href="view/assets/vendor/bootstrap/css/bootstrap.min.css"
+          href="/assets/vendor/bootstrap/css/bootstrap.min.css"
           rel="stylesheet"
         />
-        <link href="view/assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
-        <link href="view/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-        <link href="view/assets/vendor/venobox/venobox.css" rel="stylesheet" />
+        <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+        <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+        <link href="/assets/vendor/venobox/venobox.css" rel="stylesheet" />
         <link
-          href="view/assets/vendor/owl.carousel/assets/owl.carousel.min.css"
+          href="/assets/vendor/owl.carousel/assets/owl.carousel.min.css"
           rel="stylesheet"
         />
-        <link href="view/assets/vendor/aos/aos.css" rel="stylesheet" />
+        <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
 
-        <link href="view/assets/css/style.css" rel="stylesheet" />
+        <link href="/assets/css/style.css" rel="stylesheet" />
         <style>
           .nav-item a:hover {
             font-size: 1.1em;
@@ -55,7 +55,7 @@
           <li>
             <img
               class="profile-image mb-3 rounded-circle mx-auto"
-              src="view/assets/img/coding.jpg"
+              src="/assets/img/coding.jpg"
               alt="profile-image"
               style="width: 150px; height: 150px"
             />
@@ -77,7 +77,7 @@
         </ul>
       </div>
        <div id="main">
-  
+
         <nav class="navbar navbar-expand-lg navbar-dark nav-bar-colors">
           <a class="navbar-brand nav-bar-colors" href="#"></a>
           <button
@@ -135,19 +135,19 @@
           numerous feelings cheerful confined.
         </div>
       </div>
-      <script src="view/assets/vendor/jquery/jquery.min.js"></script>
-      <script src="view/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="view/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-      <script src="view/assets/vendor/php-email-form/validate.js"></script>
-      <script src="view/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-      <script src="view/assets/vendor/counterup/counterup.min.js"></script>
-      <script src="view/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-      <script src="view/assets/vendor/venobox/venobox.min.js"></script>
-      <script src="view/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-      <script src="view/assets/vendor/typed.js/typed.min.js"></script>
-      <script src="view/assets/vendor/aos/aos.js"></script>
+      <script src="/assets/vendor/jquery/jquery.min.js"></script>
+      <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+      <script src="/assets/vendor/php-email-form/validate.js"></script>
+      <script src="/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+      <script src="/assets/vendor/counterup/counterup.min.js"></script>
+      <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="/assets/vendor/venobox/venobox.min.js"></script>
+      <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+      <script src="/assets/vendor/typed.js/typed.min.js"></script>
+      <script src="/assets/vendor/aos/aos.js"></script>
 
-      <script src="view/assets/js/main.js"></script>
+      <script src="/assets/js/main.js"></script>
     </body>
 
   </html>

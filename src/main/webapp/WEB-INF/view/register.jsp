@@ -14,7 +14,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>register</title>
-    <link href="view/assets/css/style2.css" rel="stylesheet" />
+    <link href="/assets/css/style2.css" rel="stylesheet" />
     <%
       if (session.getAttribute("user_username") != null) {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/about");
@@ -174,6 +174,6 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
-    <script src="view/assets/js/scripts.js"></script>
+    <script src="/assets/js/scripts.js"></script>
   </body>
 </html>

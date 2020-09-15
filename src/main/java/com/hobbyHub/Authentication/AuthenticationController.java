@@ -22,6 +22,11 @@ public class AuthenticationController { // WORK! please
     @Autowired
     private UserService userService;
 
+    @RequestMapping("/main")
+    public String main() { //for testing js and cs with jsp and html files
+        return "main";
+    }
+
 
     @RequestMapping("/loginForm")
     public String loginForm() {
@@ -89,7 +94,7 @@ public class AuthenticationController { // WORK! please
         session.setAttribute("user_email", email);
         session.setAttribute("user_id", user.getId());
 
-        return "about";
+        return "about-hobbyhub";
     }
 
     @PostMapping("/processLogin")
@@ -133,7 +138,7 @@ public class AuthenticationController { // WORK! please
         session.setAttribute("user_email", user.getEmail());
         session.setAttribute("user_id", user.getId());
 
-        return "about";
+        return "about-hobbyhub";
     }
 
     @RequestMapping("/about")

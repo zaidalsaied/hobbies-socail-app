@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link rel="stylesheet" type="text/css" href="view/assets/css/user-profile.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/user-profile.css" />
     <link
-      href="view/assets/vendor/bootstrap/css/bootstrap.min.css"
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
@@ -29,7 +29,7 @@
     ></script>
 
     <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="view/assets/css/theme-1.css" />
+    <link id="theme-style" rel="stylesheet" href="/assets/css/theme-1.css" />
 
     <title>HobbyHub</title>
 
@@ -37,20 +37,20 @@
 
     <!-- Vendor CSS Files -->
     <link
-      href="view/assets/vendor/bootstrap/css/bootstrap.min.css"
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="view/assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
-    <link href="view/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="view/assets/vendor/venobox/venobox.css" rel="stylesheet" />
+    <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/venobox/venobox.css" rel="stylesheet" />
     <link
-      href="view/assets/vendor/owl.carousel/assets/owl.carousel.min.css"
+      href="/assets/vendor/owl.carousel/assets/owl.carousel.min.css"
       rel="stylesheet"
     />
-    <link href="view/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
 
     <!-- My Main CSS File -->
-    <link href="view/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
     <style>
       .card {
         margin-top: 2rem;
@@ -84,7 +84,7 @@
         <li>
           <img
             class="profile-image mb-3 rounded-circle mx-auto"
-            src="view/assets/images/profile.png"
+            src="/assets/images/profile.png"
             alt="profile-image"
             style="width: 150px; height: 150px"
           />
@@ -119,7 +119,7 @@
                 <div class="about-avatar">
                   <img
                     class="profile-image mb-3 rounded-circle mx-auto"
-                    src="view/assets/images/profile.png"
+                    src="/assets/images/profile.png"
                     title=""
                     alt=""
                   />
@@ -162,7 +162,7 @@
                 <div class="media">
                   <img
                     class="mr-3 img-fluid post-thumb d-none d-md-flex"
-                    src="view/assets/images/blog/blog-post-thumb-1.jpg"
+                    src="/assets/images/blog/blog-post-thumb-1.jpg"
                     alt="image"
                   />
                   <div class="media-body">
@@ -195,7 +195,7 @@
                 <div class="media">
                   <img
                     class="mr-3 img-fluid post-thumb d-none d-md-flex"
-                    src="view/assets/images/blog/blog-post-thumb-2.jpg"
+                    src="/assets/images/blog/blog-post-thumb-2.jpg"
                     alt="image"
                   />
                   <div class="media-body">
@@ -229,7 +229,7 @@
                 <div class="media">
                   <img
                     class="mr-3 img-fluid post-thumb d-none d-md-flex"
-                    src="view/assets/images/blog/blog-post-thumb-3.jpg"
+                    src="/assets/images/blog/blog-post-thumb-3.jpg"
                     alt="image"
                   />
                   <div class="media-body">
@@ -260,7 +260,7 @@
                 <div class="media">
                   <img
                     class="mr-3 img-fluid post-thumb d-none d-md-flex"
-                    src="view/assets/images/blog/blog-post-thumb-4.jpg"
+                    src="/assets/images/blog/blog-post-thumb-4.jpg"
                     alt="image"
                   />
                   <div class="media-body">
@@ -292,7 +292,7 @@
                 <div class="media">
                   <img
                     class="mr-3 img-fluid post-thumb d-none d-md-flex"
-                    src="view/assets/images/blog/blog-post-thumb-5.jpg"
+                    src="/assets/images/blog/blog-post-thumb-5.jpg"
                     alt="image"
                   />
                   <div class="media-body">
@@ -324,7 +324,7 @@
                 <div class="media">
                   <img
                     class="mr-3 img-fluid post-thumb d-none d-md-flex"
-                    src="view/assets/images/blog/blog-post-thumb-6.jpg"
+                    src="/assets/images/blog/blog-post-thumb-6.jpg"
                     alt="image"
                   />
                   <div class="media-body">
@@ -365,20 +365,20 @@
       </div>
     </div>
 
-    <script src="view/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="view/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="view/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="view/assets/vendor/php-email-form/validate.js"></script>
-    <script src="view/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="view/assets/vendor/counterup/counterup.min.js"></script>
-    <script src="view/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="view/assets/vendor/venobox/venobox.min.js"></script>
-    <script src="view/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="view/assets/vendor/typed.js/typed.min.js"></script>
-    <script src="view/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/vendor/counterup/counterup.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="/assets/vendor/typed.js/typed.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
 
     <!-- My Main JS File -->
-    <script src="view/assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 
   <!-- Vendor JS Files -->
