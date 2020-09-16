@@ -1,4 +1,5 @@
 <%@ page import="com.hobbyHub.hobby.Hobby" %>
+<%@ page import="com.hobbyHub.user.User" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -90,7 +91,7 @@
               <h2 class="title mb-2 inline">
                 <%=((Hobby) request.getSession().getAttribute("hobby_object")).getName()%>
               </h2>
-              <input type="button" value="Follow" class="btn btn-primary" />
+              <input type="button" name="<%=((Hobby) request.getSession().getAttribute("hobby_object")).getName()%>" onclick="window.location.assign( <%="'"+request.getContextPath()  + "/followingHobby/"+ ((Hobby) request.getSession().getAttribute("hobby_object")).getName()+"'"%>);"  value="Follow" class="btn btn-primary input" />
               <div class="meta mb-3"></div>
             </header>
             <div class="blog-post-body">
@@ -109,6 +110,50 @@
         </article>
       </div>
     </div>
+     <%!
+        String getHobbyArray(User user){
+          String []items = (user.getHobbies().toArray(new String[1]));
+          String result = "[";
+          for(int i = 0; i < items.length; i++) {
+            result += "\"" + items[i] + "\"";
+            if(i < items.length - 1) {
+              result += ", ";
+            }
+          }
+          result += "]";
+          return result;
+        }
+      %>
+
+      <%! String hobbyArray = "[]"; %>
+      <script>
+
+        var elem = document.getElementsByClassName("input");
+        for (var i = 0; i < elem.length; i++) {
+          elem[i].value = "Follow";
+        }
+        <%
+            if (request.getSession().getAttribute("user_object") != null) {
+                hobbyArray = getHobbyArray((User)request.getSession().getAttribute("user_object"));
+                }
+            else {
+              System.out.println("NULL SESSION " + (request.getSession() == null));
+            }
+        %>
+
+
+        var hobbyArray = <%=hobbyArray%>
+
+        for (var i = 0; i < elem.length; i++) {
+          if (hobbyArray.includes(elem[i].name)) {
+              elem[i].classList.remove('btn-primary');
+              elem[i].classList.add('btn-secondary');
+              elem[i].value = "Unfollow";
+          }
+        }
+        <% hobbyArray = "[]";%>
+        hobbyArray = [];
+        </script>
     <script src="/assets/vendor/jquery/jquery.min.js"></script>
     <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
