@@ -71,10 +71,7 @@ public class BlogController {
 
 
 
-    @RequestMapping("/top")
-    public String top(){
-    return "";
-    }
+
 }
 
 

@@ -70,7 +70,7 @@
               <a class="nav-link nav-bar-colors" href="#">Feed</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link nav-bar-colors" href="#">Blogs</a>
+              <a class="nav-link nav-bar-colors" href="/blog" >Blogs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-bar-colors" href="#">Courses</a>
