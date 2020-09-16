@@ -39,6 +39,11 @@
                               "               </li>", request.getContextPath() + "/following"));
                     }
                     %>
+                    <%
+                                        if(session.getAttribute("user_username")!= null) {
+                                          out.print("<li><a href='/post-blog'>Post</a>< /li>");
+                                        }
+                                        %>
         <%
         if(session.getAttribute("user_username")!= null) {
           out.print(String.format("<li>\n" +

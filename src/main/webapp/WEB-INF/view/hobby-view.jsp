@@ -67,19 +67,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav navbar-nav navbar-center">
             <li class="nav-item">
-              <a class="nav-link nav-bar-colors" href="#">Feed</a>
+              <a class="nav-link nav-bar-colors" href="/blog">Feed</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link nav-bar-colors" href="/blog" >Blogs</a>
+              <a class="nav-link nav-bar-colors" href="/blog">Blogs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-bar-colors" href="#">Courses</a>
+              <a class="nav-link nav-bar-colors" href="/videos">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-bar-colors" href="#">Videos</a>
+              <a class="nav-link nav-bar-colors" href="/videos">Videos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-bar-colors" href="#">About</a>
+              <a class="nav-link nav-bar-colors" href="/about">About</a>
             </li>
           </ul>
         </div>

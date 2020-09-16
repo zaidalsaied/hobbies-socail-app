@@ -62,5 +62,15 @@ public class GeneralController {
         return "blogs";
     }
 
+    @RequestMapping(value = {"/videos",  "/courses"})
+    public String showAllvideos() {
+        return "videos";
+    }
+
+    @RequestMapping(value = {"/post-blog"})
+    public String post_blog() {
+        return "post-blog";
+    }
+
 
 }

@@ -58,23 +58,23 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="nav navbar-nav navbar-center">
-        <li class="nav-item">
-          <a class="nav-link nav-bar-colors" href="#">Feed</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link nav-bar-colors" href="#">Blogs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-bar-colors" href="#">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-bar-colors" href="#">Videos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-bar-colors" href="#">About</a>
-        </li>
-      </ul>
+           <ul class="nav navbar-nav navbar-center">
+                 <li class="nav-item">
+                   <a class="nav-link nav-bar-colors" href="/blog">Feed</a>
+                 </li>
+                 <li class="nav-item active">
+                   <a class="nav-link nav-bar-colors" href="/blog">Blogs</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link nav-bar-colors" href="/videos">Courses</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link nav-bar-colors" href="/videos">Videos</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link nav-bar-colors" href="/about">About</a>
+                 </li>
+               </ul>
     </div>
   </nav>
   <div class="container-fluid">
