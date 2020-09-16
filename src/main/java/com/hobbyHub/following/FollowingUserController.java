@@ -22,12 +22,15 @@ public class FollowingUserController {
         if (user != null)
             {
            User followdUser = userService.findByUsername(username);
+           if(followdUser==null)
+              return "about-hobbyhub";
+
+               if( user.getFollowings().contains(followdUser))
+                   return "user-profile";
            user.follow(followdUser);
-           try{
-           userService.updateUser(user);}
-           catch (Exception e){
-               System.out.println("yesssssssssssssssssssssssssssssssss");
-           }
+
+           userService.updateUser(user);
+
             }
             else
                 try {

@@ -38,7 +38,7 @@ public class UserService {
             throw new NullPointerException("User name value is null");
         User user = userRepository.findByUsername(username);
         if (user == null)
-            throw new IllegalAccessError(user.getUsername() + " username is not used in the database");
+            throw new IllegalAccessError(" username is not used in the database");
 
         return user;
     }

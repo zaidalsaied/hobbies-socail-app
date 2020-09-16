@@ -45,7 +45,7 @@ public class GeneralController {
 
     }
 
-    @RequestMapping("/{username}")
+    @RequestMapping("/user/{username}")
     public String followHobby(@PathVariable(name = "username") String username, HttpServletRequest request) {
 
         User user=userService.findByUsername(username);

@@ -53,7 +53,15 @@ public class BlogController {
     }
     @RequestMapping("/all/{hobbyName}")
     public String getAll(@PathVariable(name = "hobbyName") String hobbyName, HttpServletRequest request) {
+        System.out.println(hobbyName);
+       // List<Blog> blogs=blogService.findAll();
+
         List<Blog>myBlogs= new ArrayList<>();
+       // for(Blog b:blogs){
+            //if(b.getHobbyName()==hobbyName)
+        //       myBlogs.add(b);
+           // System.out.println(b.getId());
+       // }
       List<Blog> blogs= blogService.getBlogsByHobbyName(hobbyName);
         System.out.println(myBlogs);
         HttpSession session=request.getSession();

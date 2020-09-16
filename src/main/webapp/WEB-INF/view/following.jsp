@@ -72,7 +72,7 @@
           <a href="${pageContext.request.contextPath}+"/"+${follower.username}">
             <img
               class="card-img-top"
-              src="/assets/img/chess_background.jpg"
+              src="${follower.imageUrl}"
               alt="Card image cap"
             />
           </a>
@@ -84,6 +84,39 @@
             </c:forEach>
 
       </div>
+       <section class="blog-list px-3 py-5 p-md-5">
+                <div class="container">
+                   <c:forEach items="${follower.blogs}" var="blog">
+        <div class="item mb-5">
+                    <div class="media">
+                      <img
+                        class="mr-3 img-fluid post-thumb d-none d-md-flex"
+                        src="${blog.imageUrl}"
+                        alt="blog-image"
+                      />
+
+                      <div class="media-body">
+                        <h3 class="title mb-1">
+                          <a href="${pageContext.request.contextPath}/${blog.id}">${blog.title}</a>
+                        </h3>
+                        <div class="meta mb-1">
+                          <span class="date">${blog.dateCreated}</span>
+                          <span class="comment">href="#"> ${fn:length(blog.commentsStatus.comments)}</span>
+                        </div>
+                        <div class="intro">
+                              ${blog.description}
+                        </div>
+
+                      </div>
+                      <!--//media-body-->
+                    </div>
+                    <!--//media-->
+                  </div>
+
+                  </c:forEach>
+
+                </div>
+              </section>
     </div>
 
   <%!

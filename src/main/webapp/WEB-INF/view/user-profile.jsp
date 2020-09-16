@@ -121,7 +121,7 @@
                 <div class="col-6 col-lg-3">
                   <div class="count-data text-center">
 
-               <input name="${current_profile_name}" type="button" onclick="window.location.assign(${current_profile_name} + /follow)" value="Follow" class="btn btn-primary input" />
+               <input name="${current_profile_name}" type="button" onclick="window.location.assign(${current_profile_name} + /follow"%>)" value="Follow" class="btn btn-primary input" />
                   </div>
                 </div>
               </div>
