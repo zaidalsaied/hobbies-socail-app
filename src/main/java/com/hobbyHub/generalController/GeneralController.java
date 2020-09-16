@@ -17,9 +17,10 @@ public class GeneralController {
 
     @Autowired
     UserService userService;
-    @RequestMapping("/test")
-    public String test() {
-        return "hobby-view";
+
+    @RequestMapping("/main")
+    public String main() { //for testing js and cs with jsp and html files
+        return "about-hobbyhub";
     }
 
     @RequestMapping("/browse")
@@ -27,7 +28,7 @@ public class GeneralController {
         return "hobbies";
     }
 
-    @RequestMapping("/about")
+    @RequestMapping(value = {"/", "", "/about"})
     public String about() {
         return "about-hobbyhub";
     }
@@ -56,6 +57,10 @@ public class GeneralController {
         return "/user-profile";
     }
 
+    @RequestMapping("/blog")
+    public String showAllBlogs() {
+        return "blogs";
+    }
 
 
 }

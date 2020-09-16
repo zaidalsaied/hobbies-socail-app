@@ -22,12 +22,6 @@ public class AuthenticationController { // WORK! please
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/main")
-    public String main() { //for testing js and cs with jsp and html files
-        return "main";
-    }
-
-
     @RequestMapping("/loginForm")
     public String loginForm() {
         return "login";

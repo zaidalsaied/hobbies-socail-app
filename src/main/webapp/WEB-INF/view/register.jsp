@@ -156,7 +156,7 @@
                   </div>
                   <div class="card-footer text-center">
                     <div class="small">
-                      <a href="login.html">Have an account? Go to login</a>
+                      <a href="${pageContext.request.contextPath}/loginForm">Have an account? Go to login</a>
                     </div>
                   </div>
                 </div>

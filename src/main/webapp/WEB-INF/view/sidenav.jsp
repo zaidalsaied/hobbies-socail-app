@@ -11,7 +11,7 @@
                             "        style=\"height: 150px\"\n" +
                             "/>" + "\n" +
                             "<a href=\"%s\">@%s</a>", session.getAttribute("user_imageUrl"),
-                            request.getContextPath() + "/profile/" + session.getAttribute("user_username"), session.getAttribute("user_username")));
+                            request.getContextPath()  + "/" + session.getAttribute("user_username") + "/follow", session.getAttribute("user_username")));
 
                 } else {
                     out.print(String.format("\"<form action='%s' style='display: inline;'><button type=\"submit\" style=\"margin:1em\" class=\"btn btn-dark color3\">Login</button></form>" +
@@ -26,7 +26,7 @@
             <a href="${pageContext.request.contextPath}/browse"><i class="bx bx-search-alt"></i>Browse</a>
         </li>
         <li>
-            <a href="#about"><i class="bx bx-trending-up"></i>Top Blogs</a>
+            <a href="${pageContext.request.contextPath}/blog"><i class="bx bx-trending-up"></i>Top Blogs</a>
         </li>
 
         <li>
@@ -35,7 +35,7 @@
               <%
                     if(session.getAttribute("user_username")!= null) {
                       out.print(String.format("<li>\n" +
-                              "                 <a href=\"%s\"><i class='bx bx-log-out'></i>Following</a>\n" +
+                              "                 <a href=\"%s\"><i class='bx bx-user-check'></i>Following</a>\n" +
                               "               </li>", request.getContextPath() + "/following"));
                     }
                     %>

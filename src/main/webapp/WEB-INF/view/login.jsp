@@ -89,7 +89,7 @@
                   </div>
                   <div class="card-footer text-center">
                     <div class="small">
-                      <a href="register.htm">Need an account? Sign up!</a>
+                      <a href="${pageContext.request.contextPath}/registerForm">Need an account? Sign up!</a>
                     </div>
                   </div>
                 </div>
