@@ -19,9 +19,16 @@ public class FollowingUserController {
     @RequestMapping("/{username}/follow")
     public String followHobby(@PathVariable(name = "username")String username, HttpServletRequest request, HttpServletResponse response) {
         User user = (User) request.getSession().getAttribute("user_object");
+        System.out.println("----no-------------");
         if (user != null)
             {
            User followdUser = userService.findByUsername(username);
+
+           if(user.getUsername().equals(followdUser.getUsername())){
+
+               return "my-profile";
+
+           }
            if(followdUser==null)
               return "about-hobbyhub";
 

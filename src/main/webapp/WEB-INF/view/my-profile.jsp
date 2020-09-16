@@ -69,8 +69,7 @@
             <div class="col-lg-6"></div>
             <div class="col-lg-6">
               <div class="about-avatar">
-
-                <img class="profile-image mb-3 rounded-circle mx-auto" src="${current_profile_name.imageUrl}"  alt="profile img" />
+                <img class="profile-image mb-3 rounded-circle mx-auto" src="${user_object.imageUrl}" title="" alt="" />
               </div>
             </div>
           </div>
@@ -78,27 +77,25 @@
             <div class="row">
               <div class="col-6 col-lg-3">
                 <div class="count-data text-center">
-                  <h6 class="count h2" data-to="500" data-speed="500">${fn:length(current_profile_name.publishedBlogs)}</h6>
+                  <h6 class="count h2" data-to="500" data-speed="500">${fn:length(user_object.publishedBlogs)}</h6>
                   <p class="m-0px font-w-600">Posts</p>
                 </div>
               </div>
               <div class="col-6 col-lg-3">
                 <div class="count-data text-center">
-                  <h6 class="count h2" data-to="150" data-speed="150">${fn:length(current_profile_name.followers)}</h6>
+                  <h6 class="count h2" data-to="150" data-speed="150">   ${fn:length(user_object.followers)}</h6>
                   <p class="m-0px font-w-600">Followers</p>
                 </div>
               </div>
               <div class="col-6 col-lg-3">
                 <div class="count-data text-center">
-                  <h6 class="count h2" data-to="850" data-speed="850">${fn:length(current_profile_name.followings)}</h6>
+                  <h6 class="count h2" data-to="850" data-speed="850">${fn:length(user_object.followings)}</h6>
                   <p class="m-0px font-w-600">Following</p>
                 </div>
               </div>
               <div class="col-6 col-lg-3">
                 <div class="count-data text-center">
-                  <input name="${current_profile_name}" type="button"
-                    onclick="window.location.assign(${current_profile_name} + /follow)" value="Follow"
-                    class="btn btn-primary input" />
+
                 </div>
               </div>
             </div>
@@ -108,7 +105,7 @@
       <div class="container-fluid">
              <section class="blog-list px-3 py-5 p-md-5">
                   <div class="container">
-                     <c:forEach items="${current_profile_name.publishedBlogs}" var="blog">
+                     <c:forEach items="${user_object.publishedBlogs}" var="blog">
           <div class="item mb-5">
                       <div class="media">
                         <img
@@ -142,54 +139,7 @@
       </div>
     </div>
   </div>
-  <%!
-         String getFollowingsUsers(User user){
-         String  []items=new String[user.getFollowings().size()];
-         for(int i=0;i<user.getFollowings().size();i++)
-         {
-         System.out.println(user.getFollowings().get(i).getUsername());
-         items[i]=user.getFollowings().get(i).getUsername();
-         }
 
-           String result = "[";
-           for(int i = 0; i < items.length; i++) {
-             result += "\"" + items[i] + "\"";
-             if(i < items.length - 1) {
-               result += ", ";
-             }
-           }
-           result += "]";
-           return result;
-         }
-         %>
-  <%! String followingArray = "[]"; %>
-  <script>
-    var elem = document.getElementsByClassName("input");
-    for (var i = 0; i < elem.length; i++) {
-      elem[i].value = "Follow";
-    }
-         <%
-            if (request.getSession().getAttribute("user_object") != null) {
-      followingArray = getFollowingsUsers((User)request.getSession().getAttribute("user_object"));
-
-    }
-    else {
-      System.out.println("NULL SESSION " + (request.getSession() == null));
-    }
-            %>
-
-
-         var followingArray = <%=followingArray%>
-
-         for (var i = 0; i < elem.length; i++) {
-      if (followingArray.includes(elem[i].name)) {
-        elem[i].classList.remove('btn-primary');
-        elem[i].classList.add('btn-secondary');
-        elem[i].value = "Unfollow";
-      }
-    }
-         <% followingArray = "[]";%>
-      followingArray =[];
     <script src="/assets/vendor/jquery/jquery.min.js">
   </script>
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
