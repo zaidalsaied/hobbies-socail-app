@@ -41,7 +41,7 @@
                     %>
                     <%
                                         if(session.getAttribute("user_username")!= null) {
-                                          out.print("<li><a href='/post-blog'>Post</a>< /li>");
+                                          out.print("<li><a href='/post-blog'><i class='bx bx-share'>Post</i></a>< /li>");
                                         }
                                         %>
         <%
