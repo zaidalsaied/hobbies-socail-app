@@ -16,15 +16,18 @@ public class BlogService { //please work
     private UserRepository userRepository;
 
     public boolean createBlog(Blog blog) {
-        if (blog == null)
-            throw new NullPointerException("Blog value is null");
+      //  if (blog == null)
+         //   throw new NullPointerException("Blog value is null");
 
-        if (blogRepository.findFirstById(blog.getId()) != null) {
-            System.out.println(blog.getId() + " id is already exist");
-            return false;
+        //if (blogRepository.findFirstById(blog.getId()) != null) {
+            //System.out.println(blog.getId() + " id is already exist");
+          //  return false;
+      //  }
+        try {
+            blogRepository.insert(blog);
         }
+       catch (StackOverflowError e){e.getMessage();}
 
-        blogRepository.insert(blog);
         return true;
     }
 
