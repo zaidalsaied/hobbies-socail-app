@@ -1,5 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -80,39 +78,39 @@ pageEncoding="ISO-8859-1"%>
         </div>
       </nav>
       <div class="container-fluid">
-        <section class="blog-list px-3 py-5 p-md-5">
-          <div class="container">
-             <c:forEach items="${blogs}" var="blog">
-  <div class="item mb-5">
-              <div class="media">
-                <img
-                  class="mr-3 img-fluid post-thumb d-none d-md-flex"
-                  src="${blog.imageUrl}"
-                  alt="blog-image"
-                />
+            <section class="blog-list px-3 py-5 p-md-5">
+                  <div class="container">
+                     <c:forEach items="${blogs}" var="blog">
+          <div class="item mb-5">
+                      <div class="media">
+                        <img
+                          class="mr-3 img-fluid post-thumb d-none d-md-flex"
+                          src="${blog.imageUrl}"
+                          alt="blog-image"
+                        />
 
-                <div class="media-body">
-                  <h3 class="title mb-1">
-                    <a href="${pageContext.request.contextPath}/${blog.id}">${blog.title}</a>
-                  </h3>
-                  <div class="meta mb-1">
-                    <span class="date">${blog.dateCreated}</span>
-                    <span class="comment">href="#"> ${fn:length(blog.commentsStatus.comments)}</span>
+                        <div class="media-body">
+                          <h3 class="title mb-1">
+                            <a href="${pageContext.request.contextPath}/${blog.id}">${blog.title}</a>
+                          </h3>
+                          <div class="meta mb-1">
+                            <span class="date">${blog.dateCreated}</span>
+                            <span class="comment">href="#"> ${fn:length(blog.commentsStatus.comments)}</span>
+                          </div>
+                          <div class="intro">
+                                ${blog.description}
+                          </div>
+
+                        </div>
+                        <!--//media-body-->
+                      </div>
+                      <!--//media-->
+                    </div>
+
+                     <c:forEach>
+
                   </div>
-                  <div class="intro">
-                        ${blog.description}
-                  </div>
-
-                </div>
-                <!--//media-body-->
-              </div>
-              <!--//media-->
-            </div>
-
-            </c:forEach>
-
-          </div>
-        </section>
+                </section>
       </div>
     </div>
     <script src="/assets/vendor/jquery/jquery.min.js"></script>

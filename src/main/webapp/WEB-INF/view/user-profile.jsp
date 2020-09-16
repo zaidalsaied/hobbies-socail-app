@@ -1,3 +1,9 @@
+<%@ page import="com.hobbyHub.user.User" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.List" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -85,7 +91,7 @@
                 <div class="about-avatar">
                   <img
                     class="profile-image mb-3 rounded-circle mx-auto"
-                    src="/assets/images/profile.png"
+                    src="${user_profile.imageUrl}"
                     title=""
                     alt=""
                   />
@@ -96,25 +102,26 @@
               <div class="row">
                 <div class="col-6 col-lg-3">
                   <div class="count-data text-center">
-                    <h6 class="count h2" data-to="500" data-speed="500">500</h6>
+                    <h6 class="count h2" data-to="500" data-speed="500">${fn:length(user_profile.publishedBlogs)}</h6>
                     <p class="m-0px font-w-600">Posts</p>
                   </div>
                 </div>
                 <div class="col-6 col-lg-3">
                   <div class="count-data text-center">
-                    <h6 class="count h2" data-to="150" data-speed="150">150</h6>
+                    <h6 class="count h2" data-to="150" data-speed="150">${fn:length(user_profile.followers)}</h6>
                     <p class="m-0px font-w-600">Followers</p>
                   </div>
                 </div>
                 <div class="col-6 col-lg-3">
                   <div class="count-data text-center">
-                    <h6 class="count h2" data-to="850" data-speed="850">850</h6>
+                    <h6 class="count h2" data-to="850" data-speed="850">${fn:length(user_profile.followings)}</h6>
                     <p class="m-0px font-w-600">Following</p>
                   </div>
                 </div>
                 <div class="col-6 col-lg-3">
                   <div class="count-data text-center">
-                    <button class="btn btn-primary">Follow</button>
+
+               <input name="${current_profile_name}" type="button" onclick="window.location.assign(${current_profile_name} + /follow)" value="Follow" class="btn btn-primary input" />
                   </div>
                 </div>
               </div>
@@ -331,6 +338,57 @@
       </div>
     </div>
 
+
+  <%!
+    String getFollowingsUsers(User user){
+   String  []items=new String[user.getFollowings().size()];
+    for(int i=0;i<user.getFollowings().size();i++)
+    {
+    System.out.println(user.getFollowings().get(i).getUsername());
+    items[i]=user.getFollowings().get(i).getUsername();
+    }
+
+      String result = "[";
+      for(int i = 0; i < items.length; i++) {
+        result += "\"" + items[i] + "\"";
+        if(i < items.length - 1) {
+          result += ", ";
+        }
+      }
+      result += "]";
+      return result;
+    }
+  %>
+
+  <%! String followingArray = "[]"; %>
+  <script>
+
+    var elem = document.getElementsByClassName("input");
+    for (var i = 0; i < elem.length; i++) {
+      elem[i].value = "Follow";
+    }
+    <%
+        if (request.getSession().getAttribute("user_object") != null) {
+            followingArray = getFollowingsUsers((User)request.getSession().getAttribute("user_object"));
+
+            }
+        else {
+          System.out.println("NULL SESSION " + (request.getSession() == null));
+        }
+    %>
+
+
+    var followingArray = <%=followingArray%>
+
+    for (var i = 0; i < elem.length; i++) {
+      if (followingArray.includes(elem[i].name)) {
+          elem[i].classList.remove('btn-primary');
+          elem[i].classList.add('btn-secondary');
+          elem[i].value = "Unfollow";
+      }
+    }
+    <% followingArray = "[]";%>
+    followingArray = [];
     <script src="/assets/vendor/jquery/jquery.min.js"></script>
     <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>

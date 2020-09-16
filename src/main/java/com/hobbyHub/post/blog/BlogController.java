@@ -5,13 +5,17 @@ import com.hobbyHub.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
+@RequestMapping("/blog")
 public class BlogController {
 
     @Autowired
@@ -47,4 +51,27 @@ public class BlogController {
     }
 
     }
+    @RequestMapping("/all/{hobbyName}")
+    public String getAll(@PathVariable(name = "hobbyName") String hobbyName, HttpServletRequest request) {
+        List<Blog>myBlogs= new ArrayList<>();
+      List<Blog> blogs= blogService.getBlogsByHobbyName(hobbyName);
+        System.out.println(myBlogs);
+        HttpSession session=request.getSession();
+        session.setAttribute("myBlogs",myBlogs);
+        return "blogs";
+    }
+
+
+
+    @RequestMapping("/top")
+    public String top(){
+    return "";
+    }
 }
+
+
+
+
+
+
+

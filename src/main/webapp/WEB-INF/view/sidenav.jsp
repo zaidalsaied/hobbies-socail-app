@@ -28,14 +28,17 @@
         <li>
             <a href="#about"><i class="bx bx-trending-up"></i>Top Blogs</a>
         </li>
-        <li>
-            <a href="#resume"><i class="bx bx-user-check"></i>Following</a>
-        </li>
 
         <li>
             <a href="${pageContext.request.contextPath}/about"><i class="bx bx-info-circle"></i>About</a>
         </li>
-
+              <%
+                    if(session.getAttribute("user_username")!= null) {
+                      out.print(String.format("<li>\n" +
+                              "                 <a href=\"%s\"><i class='bx bx-log-out'></i>Following</a>\n" +
+                              "               </li>", request.getContextPath() + "/following"));
+                    }
+                    %>
         <%
         if(session.getAttribute("user_username")!= null) {
           out.print(String.format("<li>\n" +

@@ -83,9 +83,9 @@ public class AuthenticationController { // WORK! please
             request.setAttribute("registerError", registerError);
             return "register";
         }
+
         User user = new User(firstName, lastName, username, email, encryptPassword(password), pickRandomPic());
         userService.createUser(user);
-
         HttpSession session = request.getSession();
         session.setAttribute("user_username", username);
         session.setAttribute("user_first_name", firstName);

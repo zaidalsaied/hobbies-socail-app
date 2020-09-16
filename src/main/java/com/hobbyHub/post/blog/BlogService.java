@@ -4,7 +4,10 @@ package com.hobbyHub.post.blog;
 import com.hobbyHub.user.User;
 import com.hobbyHub.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -16,19 +19,22 @@ public class BlogService { //please work
     private UserRepository userRepository;
 
     public boolean createBlog(Blog blog) {
-      //  if (blog == null)
-         //   throw new NullPointerException("Blog value is null");
+     if (blog == null)
+        throw new NullPointerException("Blog value is null");
 
-        //if (blogRepository.findFirstById(blog.getId()) != null) {
-            //System.out.println(blog.getId() + " id is already exist");
-          //  return false;
-      //  }
+       if (blogRepository.findFirstById(blog.getId()) != null) {
+        System.out.println(blog.getId() + " id is already exist");
+         return false;
+      }
         try {
             blogRepository.insert(blog);
         }
        catch (StackOverflowError e){e.getMessage();}
 
         return true;
+    }
+    public List<Blog>findAll(){
+        return blogRepository.findAll();
     }
 
     public boolean updateBlog(Blog blog) {
@@ -46,6 +52,7 @@ public class BlogService { //please work
         if (hobbyName == null)
             throw new NullPointerException("Hobby name value is null");
 
+        //findByHobbyName cause an error
         return blogRepository.findByHobbyName(hobbyName);
     }
 
@@ -55,4 +62,6 @@ public class BlogService { //please work
 
         return blogRepository.findByCreator(user);
     }
+
+    //public List<Blog> findByLikesRange(int minLikes, int maxSaLikes) {}
 }
