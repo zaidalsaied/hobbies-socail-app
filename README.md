@@ -1,5 +1,5 @@
-# HobbyHub
-**HobbyHub** is a social media site that aims to connect people with same hobbies and share and learn some
+# Hobbies socail app
+**Hobbies socail app** is a social media site that aims to connect people with same hobbies and share and learn some
 skills, It could be a good way to learn and explore a new hobby and create some new friends
 What are the problems that HobbyHub is trying to solve?
 **1- Some people want to learn a new hobby, but they don't know how to start**
